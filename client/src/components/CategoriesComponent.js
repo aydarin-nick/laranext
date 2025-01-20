@@ -4,11 +4,7 @@ import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import LoginLinks from "@/app/LoginLinks";
 
-function ListItem(props){
-    return <li>{props.name}</li>
-}
-
-function CategoriesFunc(props) {
+function CategoriesFunc() {
     const [items, setItems] = useState([]);
     //const [newItems, setNewItems] = useState("");
     //const [serchItem, setSerchItem] = useState("");
@@ -32,31 +28,11 @@ function CategoriesFunc(props) {
         fetchItems()
     }, [])
 
-    const content = items.map((cat) =>
-        <li key={cat.id} className="has-sub">
-            <a className="sublink" href="#" style={{ display: 'inline-block', width: '150px' }}
-               ><span>{cat.name}</span></a>
-            <a className="link-edit" style={{ display: 'inline-block', width: '138px' }}
-               href="1">Изменить</a>
-            <button className="btn_del" data-id={cat.id} value={cat.id}>Удалить</button>
-            <ul>
-                {cat.children_categories.map((childCat) => {
-                    <li key={childCat.id} className="has-sub">
-                        <a className="sublink" href="#" style= {{ display: 'inline-block' , width: '150px' }}>
-                            <span>{childCat.name}</span></a>
-                        <a className="link-edit" style={{ display: 'inline-block', width: '138px' }}
-                           href="1">Изменить</a>
-                        <button className="btn_del" data-id={childCat.id} value={childCat.id} >Удалить
-                        </button>
-                    </li>
-                })}
-            </ul>
-        </li>
-    );
-
     return (
         <ul>
-            {content}
+            {items.map((item,key) => (
+                <li className='item' key={key}>{item.name}1</li>
+            ))}
         </ul>
     )
 
@@ -69,12 +45,6 @@ export default CategoriesFunc
         checked: !item.checked} : item)
     setItems(listItems)
 }
-
-<ul>
-            {items.map((item) => (
-                <li className='item' key={item.id}>{item.name}</li>
-            ))}
-        </ul>
 
 const handleDelete = (id) => {
     const listItems = items.filter(item => item.id !== id)

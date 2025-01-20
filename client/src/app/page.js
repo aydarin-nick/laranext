@@ -23,7 +23,7 @@ const Home = () => {
                             </g>
                         </svg>
                     </div>
-                    <div id="cat-list">
+                    <div>
                         <CategoriesFunc />
                     </div>
                     <div className="flex justify-center mt-4 sm:items-center sm:justify-between">

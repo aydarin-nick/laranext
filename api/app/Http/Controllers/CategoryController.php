@@ -14,12 +14,13 @@ class CategoryController extends Controller
 
     public function index()
     {
-        $categories = Categories::whereNull('categories_id')
+        /*$categories = Categories::whereNull('categories_id')
             ->with('childrenCategories')
             ->where('delete',0)
-            ->get();
+            ->get();*/
         $categories_list = Categories::get();
-        return response()->json($categories);
+        $categories = Categories::whereNull('categories_id')->get();
+        return response()->json(array($categories));
         //return view('categories', compact('categories'), compact('categories_list'));
     }
 
