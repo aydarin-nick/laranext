@@ -131,6 +131,15 @@
       <path value="$PROJECT_DIR$/api/vendor/hamcrest/hamcrest-php" />
       <path value="$PROJECT_DIR$/api/vendor/symfony/polyfill-uuid" />
       <path value="$PROJECT_DIR$/api/vendor/dflydev/dot-access-data" />
+      <path value="$PROJECT_DIR$/api/vendor/zircote/swagger-php" />
+      <path value="$PROJECT_DIR$/api/vendor/swagger-api/swagger-ui" />
+      <path value="$PROJECT_DIR$/api/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/api/vendor/darkaonline/l5-swagger" />
+      <path value="$PROJECT_DIR$/api/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/api/vendor/stella-maris/clock" />
+      <path value="$PROJECT_DIR$/api/vendor/lcobucci/clock" />
+      <path value="$PROJECT_DIR$/api/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/api/vendor/tymon/jwt-auth" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />
